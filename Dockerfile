@@ -8,5 +8,7 @@ WORKDIR /ML-API-master/app
 COPY requirements.txt /ML-API-master
 RUN pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 8501
+
 # Copy contents from your local to your docker container
 COPY . /ML-API-master/app
