@@ -10,3 +10,8 @@ RUN pip3 install -r requirements.txt
 
 # Copy contents from your local to your docker container
 COPY . /ML-API-master/app
+
+WORKDIR /ML-API-master/app/app
+
+ENTRYPOINT["uvicorn"]
+CMD["main:app"]
