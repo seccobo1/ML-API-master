@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
 # Make directories suited to your application
 RUN mkdir -p /ML-API-master/app
@@ -12,8 +12,3 @@ EXPOSE 8501
 
 # Copy contents from your local to your docker container
 COPY . /ML-API-master/app
-
-WORKDIR /ML-API-master/app/app
-
-ENTRYPOINT ["uvicorn"]
-CMD ["main:app"]
