@@ -1,7 +1,6 @@
 numpy
 pydantic
-uvicorn
+uvicorn[standard]
 fastapi
 scikit-learn
 pandas
-websockets
